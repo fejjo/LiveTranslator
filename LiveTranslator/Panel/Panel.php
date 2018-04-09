@@ -8,9 +8,11 @@ namespace LiveTranslator;
 
 use Nette;
 use Latte;
+use Nette\SmartObject;
 
-class Panel extends Nette\Object implements \Tracy\IBarPanel
+class Panel implements \Tracy\IBarPanel
 {
+	use SmartObject;
 
 	const XHR_HEADER = 'X-Translation-Client';
 
